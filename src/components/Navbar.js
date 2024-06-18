@@ -1,8 +1,9 @@
+
 import React, { useState } from 'react';
 import { AppBar, Toolbar, Typography, Button, Menu, MenuItem } from '@mui/material';
 
 const navItems = [
-  { name: 'POY', pdfs: ['PPPI.pdf', 'MM.pdf', 'SD.pdf', 'EWM.pdf', 'QM.pdf'] },
+  { name: 'POY', pdfs: ['PPPI.pdf', 'MM.pdf', 'SD.pdf', 'EWM.pdf', 'PM.pdf'] },
   { name: 'FDY', pdfs: ['PPPI.pdf', 'MM.pdf', 'SD.pdf', 'EWM.pdf', 'PM.pdf'] },
   { name: 'PSF', pdfs: ['PPPI.pdf', 'MM.pdf', 'SD.pdf', 'EWM.pdf', 'PM.pdf'] },
   { name: 'RPSF', pdfs: ['PPPI.pdf', 'MM.pdf', 'SD.pdf', 'EWM.pdf', 'PM.pdf'] },
@@ -42,7 +43,8 @@ const Navbar = () => {
         <Typography 
           variant="h3" 
           component="div" 
-          sx={{ flexGrow: 1, fontFamily: 'serif', textAlign: 'flex-start', fontSize: '1.5rem', color: 'black' }}>
+          sx={{ flexGrow: 1, fontFamily: 'serif', textAlign: 'flex-start', fontSize: '1.5rem', color: 'black', display: 'flex', alignItems: 'center' ,height:'50px'}}>
+          <img src="/lo.png" alt="Company Logo" style={{ height: '55px', marginRight: '0.5rem' ,borderRadius:"5px"}} />
           <span style={{ fontFamily: 'Times New Roman, Times, serif' }}>ALOK INDUSTRIES SILVASSA</span>
         </Typography>
         {navItems.map((item, index) => (
@@ -63,11 +65,14 @@ const Navbar = () => {
               open={Boolean(anchorEl)}
               onClose={handleClose}
             >
-              {selectedPDFs.map((pdf, idx) => (
-                <MenuItem key={idx} onClick={() => handleDownload(pdf)}>
-                  {pdf}
-                </MenuItem>
-              ))}
+              {selectedPDFs.map((pdf, idx) => {
+                const displayName = pdf.replace('.pdf', '');
+                return (
+                  <MenuItem key={idx} onClick={() => handleDownload(pdf)}>
+                    {displayName}
+                  </MenuItem>
+                );
+              })}
             </Menu>
           </div>
         ))}
@@ -77,4 +82,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
