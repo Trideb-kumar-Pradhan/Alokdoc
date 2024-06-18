@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { AppBar, Toolbar, Typography, Button, Menu, MenuItem } from '@mui/material';
 
 const navItems = [
-  { name: 'POY', pdfs: ['PPPI.pdf', 'MM.pdf', 'SD.pdf', 'EWM.pdf', 'PM.pdf'] },
+  { name: 'POY', pdfs: ['PPPI.pdf', 'MM.pdf', 'SD.pdf', 'EWM.pdf', 'QM.pdf'] },
   { name: 'FDY', pdfs: ['PPPI.pdf', 'MM.pdf', 'SD.pdf', 'EWM.pdf', 'PM.pdf'] },
   { name: 'PSF', pdfs: ['PPPI.pdf', 'MM.pdf', 'SD.pdf', 'EWM.pdf', 'PM.pdf'] },
   { name: 'RPSF', pdfs: ['PPPI.pdf', 'MM.pdf', 'SD.pdf', 'EWM.pdf', 'PM.pdf'] },
