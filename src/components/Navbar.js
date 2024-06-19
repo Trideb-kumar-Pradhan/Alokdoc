@@ -47,18 +47,21 @@ const Navbar = () => {
             component="div"
             sx={{ flexGrow: 1, fontFamily: 'serif', textAlign: 'flex-start', fontSize: '1.5rem', color: 'black', display: 'flex', alignItems: 'center', height: '50px' }}
           >
-            <img src="/lo.png" alt="Company Logo" style={{ height: '55px', marginRight: '0.5rem', borderRadius: "5px" }} />
-            <span style={{ fontFamily: 'Times New Roman, Times, serif' }}>ALOK INDUSTRIES SILVASSA</span>
+            <img src="/lo.png" alt="Company Logo" style={{ height: '55px', marginRight: '0.5rem', borderRadius: "5px",boxShadow: '0px 3px 5px rgba(14, 13, 15, 4.9)', }} />
+            <span style={{ fontSize:'25px',fontFamily: 'Times New Roman, Times, serif',}}>ALOK INDUSTRIES SILVASSA</span>
           </Typography>
           {navItems.map((item, index) => (
             <div key={index} style={{ position: 'relative' }}>
-              <Button
-                aria-controls={`simple-menu-${index}`}
-                aria-haspopup="true"
-                onClick={(e) => handleClick(e, item)}
-                color="inherit"
-                style={{ boxShadow: 'none' }}
-              >
+<Button
+  aria-controls={`simple-menu-${index}`}
+  aria-haspopup="true"
+  onClick={(e) => handleClick(e, item)}
+  color="inherit"
+  style={{
+    boxShadow: '0px 3px 5px rgba(4, 3, 6, 0.4)', // Example box shadow
+    margin: '5px', // Example padding values (adjust as needed)
+  }}
+>
                 {item.name}
               </Button>
               <Menu
@@ -95,3 +98,5 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+

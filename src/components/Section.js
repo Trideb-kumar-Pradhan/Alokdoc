@@ -12,17 +12,21 @@ const Section = () => {
         backgroundPosition: 'center',
         display: 'flex',
         justifyContent: 'flex-end', // Align content to the flex-end of the container
-        paddingRight: '5rem', // Adds padding to the right side of the container
+        paddingRight: '5rem', 
         alignItems: 'center', // Centers items vertically
         color: 'white',
         textAlign: 'center',
       }}
     >
-<Typography variant="h3">
-  <span style={{ color: 'grey' }}>Welcome to  Alok DOCS</span>
-</Typography>
+    <Typography variant="h3" style={{ color: 'grey',  }}>
+      Welcome to Alok DOCS
+    </Typography>
     </Box>
   );
 };
 
 export default Section;
+
+
+
+
