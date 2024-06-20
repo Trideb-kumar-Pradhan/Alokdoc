@@ -153,8 +153,8 @@ const Navbar = () => {
               alignItems: 'center',
             }}
           >
-            <img src="/lo.png" alt="Company Logo" style={{ height: '55px', marginRight: '0.5rem', borderRadius: '5px', boxShadow: '0px 3px 5px rgba(0, 0, 0, 0.5)' }} />
-            <span style={{ fontSize: '25px', fontFamily: 'Times New Roman, Times, serif', textShadow: '0px 2px 4px rgba(0, 0, 0, 0.3)' }}>
+            <img src="/lo.png" alt="Company Logo" style={{ height: '55px', marginRight: '0.5rem', borderRadius: '5px', boxShadow: '0px 3px 5px rgba(4, 5, 0, 2.5)' }} />
+            <span style={{ fontSize: '25px', fontFamily: 'Times New Roman, Times, serif', textShadow: '0px 2px 4px rgba(0, 0, 0, 3.3)' }}>
               ALOK INDUSTRIES SILVASSA
             </span>
           </Typography>
@@ -165,6 +165,10 @@ const Navbar = () => {
                 aria-haspopup="true"
                 onClick={(e) => handleClick(e, item)}
                 color="inherit"
+                style={{
+                  boxShadow: '0px 3px 5px rgba(4, 3, 6, 0.4)', 
+                  margin: '5px', 
+                }}
               >
                 {item.name}
               </Button>
