@@ -14,7 +14,7 @@ const Section = () => {
         justifyContent: 'center',
         alignItems: 'center',
         height: '90vh', 
-        backgroundColor: 'grey',
+        // backgroundColor: 'grey',
         backgroundSize: 'cover', 
         backgroundRepeat: 'no-repeat',
         color: 'white',
