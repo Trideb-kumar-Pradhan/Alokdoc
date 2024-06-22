@@ -46,13 +46,13 @@ const Section = () => {
           </div>
           <div className="slide">
             <img
-              src={`${process.env.PUBLIC_URL}/images/k.webp`}
+              src={`${process.env.PUBLIC_URL}/images/as.webp`}
               alt="Slide 2"
             />
           </div>
           <div className="slide">
             <img
-              src={`${process.env.PUBLIC_URL}/images/as.webp`}
+              src={`${process.env.PUBLIC_URL}/images/k.webp`}
               alt="Slide 3"
             />
           </div>
@@ -61,5 +61,6 @@ const Section = () => {
     </Box>
   );
 };
+
 
 export default Section;
