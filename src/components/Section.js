@@ -14,13 +14,12 @@ const Section = () => {
         justifyContent: 'center',
         alignItems: 'center',
         height: '90vh', 
-        // backgroundColor: 'grey',
         backgroundSize: 'cover', 
         backgroundRepeat: 'no-repeat',
-        color: 'white',
+        // color: 'white',
         textAlign: 'center',
         overflow: 'hidden', 
-        position: 'relative', /* Ensure relative positioning for absolute children */
+        position: 'relative', 
       }}
     >
       <Typography variant="h5" className="carousel-heading">
@@ -34,7 +33,11 @@ const Section = () => {
           interval={4000}
           stopOnHover={false}
           className="carousel"
+          transitionTime={150}
+          direction="forward"
+         
         >
+        
           <div className="slide">
             <img
               src={`${process.env.PUBLIC_URL}/images/a.jpg`}
@@ -49,7 +52,7 @@ const Section = () => {
           </div>
           <div className="slide">
             <img
-              src={`${process.env.PUBLIC_URL}/images/sm.jpg`}
+              src={`${process.env.PUBLIC_URL}/images/as.webp`}
               alt="Slide 3"
             />
           </div>

@@ -4,10 +4,9 @@
     justify-content: center;
     align-items: center;
     overflow: hidden; 
+        position: relative; 
+  } 
 
-
-  }
-  
   .carousel-wrapper .slide {
     position: relative;
     width: 100vw; 
@@ -15,12 +14,13 @@
     overflow: hidden;
      
   }
-  
+ 
   .carousel-wrapper .slide img {
     width: 100vw;
     height: 100vh;
-
+object-fit: cover;
   }
+  
   .carousel-heading {
     position: absolute;
     top: 95%;
@@ -34,3 +34,8 @@
     border-radius: 10px;
   }
  
+
+
+  
+
+   
