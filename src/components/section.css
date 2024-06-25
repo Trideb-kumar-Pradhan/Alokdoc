@@ -18,20 +18,20 @@
   .carousel-wrapper .slide img {
     width: 100vw;
     height: 100vh;
-object-fit: cover;
+object-fit: content;
   }
   
   .carousel-heading {
     position: absolute;
-    top: 95%;
-    left: 50%;
+    top: 95.7%;
+    left: 10%;
     transform: translate(-50%, -50%);
     z-index: 10;
     color: rgb(255, 255, 255);
-    text-align: center;
-    background-color: rgba(1, 4, 14, 0.7); 
-    padding: 3px 20px; 
-    border-radius: 10px;
+    /* text-align: center; */
+    background-color: rgb(220, 20, 60); 
+    padding:3px 10px; 
+    border-radius: 5px;
   }
  
 

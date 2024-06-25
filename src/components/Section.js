@@ -23,7 +23,10 @@ const Section = () => {
       }}
     >
       <Typography variant="h5" className="carousel-heading">
-        Welcome to Alok DOCS
+      <span style={{ fontSize: '25px', fontFamily: 'Times New Roman, Times, serif', textShadow: '0px 2px 4px rgba(0, 0, 0, 3.3)' }}>
+      Welcome to Alok DOCS
+            </span>
+        
       </Typography>
       <div className="carousel-wrapper">
         <Carousel
@@ -40,27 +43,39 @@ const Section = () => {
         
           <div className="slide">
             <img
-              src={`${process.env.PUBLIC_URL}/images/a.jpg`}
+              src={`${process.env.PUBLIC_URL}/images/j.jpg`}
               alt="Slide 1" 
             />
           </div>
           <div className="slide">
             <img
-              src={`${process.env.PUBLIC_URL}/images/k.webp`}
+              src={`${process.env.PUBLIC_URL}/images/b.jpg`}
               alt="Slide 2"
             />
           </div>
           <div className="slide">
             <img
-              src={`${process.env.PUBLIC_URL}/images/a.jpg`}
+              src={`${process.env.PUBLIC_URL}/images/i.jpg`}
               alt="Slide 2"
             />
           </div>
           <div className="slide">
             <img
-              src={`${process.env.PUBLIC_URL}/images/k.webp`}
+              src={`${process.env.PUBLIC_URL}/images/l.jpg`}
               alt="Slide 3"
-            />
+            />            
+          </div>
+          <div className="slide">
+            <img
+              src={`${process.env.PUBLIC_URL}/images/g.jpg`}
+              alt="Slide 3"
+            />            
+          </div>
+          <div className="slide">
+            <img
+              src={`${process.env.PUBLIC_URL}/images/h.jpg`}
+              alt="Slide 3"
+            />            
           </div>
         </Carousel>
       </div>

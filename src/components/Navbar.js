@@ -116,11 +116,9 @@ import '@react-pdf-viewer/core/lib/styles/index.css';
 
 const navItems = [
   { name: 'MM', pdfs: ['A.pdf', 'E.pdf', 'D.pdf', 'C.pdf', 'B.pdf'], displayNames: ['MASTER DATA', 'POY/FDY PACKING', 'PSF/RPSF PACKING', 'DTY PACKING', 'ERROR HANDLING'] },
-  { name: 'PPPI', pdfs: ['A.pdf', 'B.pdf', 'E.pdf', 'C.pdf', 'D.pdf'], displayNames: ['MASTER DATA', 'POY/FDY PACKING', 'PSF/RPSF PACKING', 'DTY PACKING', 'ERROR HANDLING'] },
-  { name: 'EWM', pdfs: ['A.pdf', 'B.pdf', 'E.pdf', 'C.pdf', 'D.pdf'], displayNames: ['MASTER DATA', 'POY/FDY PACKING', 'PSF/RPSF PACKING', 'DTY PACKING', 'ERROR HANDLING'] },
-  { name: 'SD', pdfs: ['A.pdf', 'B.pdf', 'E.pdf', 'C.pdf', 'D.pdf'], displayNames: ['MASTER DATA', 'POY/FDY PACKING', 'PSF/RPSF PACKING', 'DTY PACKING', 'ERROR HANDLING'] },
-  { name: 'QM', pdfs: ['A.pdf', 'B.pdf', 'E.pdf', 'C.pdf', 'D.pdf'], displayNames: ['MASTER DATA', 'POY/FDY PACKING', 'PSF/RPSF PACKING', 'DTY PACKING', 'ERROR HANDLING'] },
-  { name: 'PACKING MODULE', pdfs: ['A.pdf', 'B.pdf', 'E.pdf', 'C.pdf', 'D.pdf'], displayNames: ['MASTER DATA', 'POY/FDY PACKING', 'PSF/RPSF PACKING', 'DTY PACKING', 'ERROR HANDLING'] },
+  { name: 'PPPI', pdfs: ['A.pdf', 'B.pdf', 'E.pdf', 'C.pdf', 'D.pdf'], displayNames: ['MASTER DATA', 'PACKING PREREQUISITES', 'PO CREATION', 'PRS', 'MFORM'] },
+  { name: 'EWM', pdfs: ['A.pdf', 'B.pdf', 'E.pdf'], displayNames: ['TRANSPORT', 'TRACKFIRST', 'WMDASHBOARD'] },
+  { name: 'PACKING MODULE', pdfs: ['A.pdf', 'B.pdf', 'E.pdf', 'C.pdf', 'D.pdf','A.pdf', 'B.pdf', 'E.pdf', 'C.pdf', 'D.pdf','B.pdf', 'E.pdf', 'C.pdf', 'D.pdf'], displayNames: ['CP/MASTERBATCH', 'POY/FDY', 'PSF/RPSF', 'DTY', 'WEAVING','KNITTING','EMBROIDARY','HEMMING','GARMENT','MADEUPS/BADDING','SEFTY TEXTTILE','SPINNING/PACKAGING/CONE/BRIKET','TEXTTILE PALLET TRANSFER','ZPPRECRON'] },
 ];
 
 const submenuOptions = {
@@ -132,34 +130,12 @@ const submenuOptions = {
     ],
   },
   PPPI: {
-    'DTY PACKING': [
-      { name: '3debXy', pdf: 'a.pdf' },
-      { name: '3debAB', pdf: 'a.pdf' },
-      { name: '3debMN', pdf: 'a.pdf' },
-    ],
   },
   EWM: {
   },
   QM: {
   },
   'PACKING MODULE': {
-  },
-  SD: {
-    'MASTER DATA': [
-      { name: '3debXy', pdf: 'a.pdf' },
-      { name: '3debAB', pdf: 'b.pdf' },
-      { name: '3debMN', pdf: 'c.pdf' },
-    ],
-    'POY/FDY PACKING': [
-      { name: '3debXy', pdf: 'a.pdf' },
-      { name: '3debAB', pdf: 'b.pdf' },
-      { name: '3debMN', pdf: 'c.pdf' },
-    ],
-    'PSF/RPSF PACKING': [
-      { name: '3debXy', pdf: 'a.pdf' },
-      { name: '3debAB', pdf: 'b.pdf' },
-      { name: '3debMN', pdf: 'c.pdf' },
-    ],
   },
 };
 
@@ -214,7 +190,8 @@ const Navbar = () => {
 
   return (
     <>
-      <AppBar position="static" style={{ backgroundColor: '#1E90FF', boxShadow: 'none' }}>
+      {/* <AppBar position="static" style={{ backgroundColor: '#1E90FF', boxShadow: 'none' }}> */}
+      <AppBar position="static" style={{ backgroundColor: '#DC143C', boxShadow: 'none',color:'white' }}>
         <Toolbar>
           <Typography
             variant="h3"
@@ -240,6 +217,7 @@ const Navbar = () => {
                 style={{
                   boxShadow: '0px 3px 5px rgba(4, 3, 6, 0.4)', 
                   margin: '5px', 
+                  color:'white',
                 }}
               >
                 {item.name}
