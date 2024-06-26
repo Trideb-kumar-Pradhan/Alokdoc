@@ -115,7 +115,7 @@ import { Worker, Viewer } from '@react-pdf-viewer/core';
 import '@react-pdf-viewer/core/lib/styles/index.css';
 
 const navItems = [
-  { name: 'MM', pdfs: ['A.pdf', 'E.pdf', 'D.pdf', 'C.pdf', 'B.pdf'], displayNames: ['MASTER DATA', 'POY/FDY PACKING', 'PSF/RPSF PACKING', 'DTY PACKING', 'ERROR HANDLING'] },
+  { name: 'MM', pdfs: ['A.pdf', 'E.pdf', 'D.pdf', 'C.pdf', 'B.pdf','B.pdf','B.pdf'], displayNames: ['PURCHASE REQUISITION', 'PURCHASE ORDER', 'SERVICE ENTRY AGAINST WORK ORDER', 'INVENTORY MANAGEMENT', 'INBOUND TRUCK TRACKING','OUTGATE PASS ORDER','REPORTS'] },
   { name: 'PPPI', pdfs: ['A.pdf', 'B.pdf', 'E.pdf', 'C.pdf', 'D.pdf'], displayNames: ['MASTER DATA', 'PACKING PREREQUISITES', 'PO CREATION', 'PRS', 'MFORM'] },
   { name: 'EWM', pdfs: ['A.pdf', 'B.pdf', 'E.pdf'], displayNames: ['TRANSPORT', 'TRACKFIRST', 'WMDASHBOARD'] },
   { name: 'PACKING MODULE', pdfs: ['A.pdf', 'B.pdf', 'E.pdf', 'C.pdf', 'D.pdf','A.pdf', 'B.pdf', 'E.pdf', 'C.pdf', 'D.pdf','B.pdf', 'E.pdf', 'C.pdf', 'D.pdf'], displayNames: ['CP/MASTERBATCH', 'POY/FDY', 'PSF/RPSF', 'DTY', 'WEAVING','KNITTING','EMBROIDARY','HEMMING','GARMENT','MADEUPS/BADDING','SEFTY TEXTTILE','SPINNING/PACKAGING/CONE/BRIKET','TEXTTILE PALLET TRANSFER','ZPPRECRON'] },
@@ -123,7 +123,12 @@ const navItems = [
 
 const submenuOptions = {
   MM: {
-    'DTY PACKING': [
+    'PURCHASE REQUISITION': [
+      { name: '3debXy', pdf: 'a.pdf' },
+      { name: '3debAB', pdf: 'd.pdf' },
+      { name: '3debMN', pdf: 'd.pdf' },
+    ],
+    'PURCHASE ORDER': [
       { name: '3debXy', pdf: 'a.pdf' },
       { name: '3debAB', pdf: 'd.pdf' },
       { name: '3debMN', pdf: 'd.pdf' },
@@ -190,7 +195,6 @@ const Navbar = () => {
 
   return (
     <>
-      {/* <AppBar position="static" style={{ backgroundColor: '#1E90FF', boxShadow: 'none' }}> */}
       <AppBar position="static" style={{ backgroundColor: '#DC143C', boxShadow: 'none',color:'white' }}>
         <Toolbar>
           <Typography
