@@ -39,14 +39,14 @@ object-fit: content;
   display: flex;
   flex-direction: row;
   position: absolute;
-  top: 79.7%;
+  bottom: 11.7%;
   left: 99%;
   transform: translate(-50%, -50%) rotate(-90deg);
   z-index: 10;
-
+  white-space: nowrap;
   color: rgb(255, 255, 255);
   background-color: rgb(220, 20, 60); 
-  padding:2px 5px;
+  padding:1.7px 6px;
 }
 /* .carousel-sideheading1 {
   display: flex;
