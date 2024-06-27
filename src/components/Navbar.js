@@ -124,9 +124,11 @@ const navItems = [
 const submenuOptions = {
   MM: {
     'PURCHASE REQUISITION': [
-      { name: '3debXy', pdf: 'a.pdf' },
-      { name: '3debAB', pdf: 'd.pdf' },
-      { name: '3debMN', pdf: 'd.pdf' },
+      { name: 'Service PR ', pdf: 'PR for services.pdf' },
+      { name: 'PR against SO', pdf: 'PR Against SO.pdf' },
+      { name: 'PR for ZFRT', pdf: 'PR for ZFRT.pdf' },
+      { name: 'PR for ZPAM & ZPAM', pdf: 'PR for ZMRO&ZPAM.pdf' },
+      { name: 'PR Release', pdf: 'PR Release.pdf' },
     ],
     'PURCHASE ORDER': [
       { name: '3debXy', pdf: 'a.pdf' },
@@ -256,17 +258,17 @@ const Navbar = () => {
         </DialogContent>
       </Dialog>
 
-      <Dialog open={subDialogOpen} onClose={handleSubDialogClose}>
-        <DialogContent style={{ padding:'0px'}}>
+      <Dialog open={subDialogOpen} onClose={handleSubDialogClose} maxWidth="md"style={{ }} >
+        <DialogContent style={{ padding:'10px' , display:'flex', justifyContent: 'center'}}>
           {submenuItems && submenuItems.map((item, idx) => (
             <Button
-              key={idx}
+              key={idx}  
               onClick={() => {
                 setSelectedPDF(item.pdf);
                 setDialogOpen(true);
                 handleSubDialogClose();
               }}
-              style={{ margin: '10px' }}
+              style={{ margin: '10px',  boxShadow: '0px 3px 5px rgba(4, 5, 0, 2.5)',fontSize:'15px',backgroundColor:'rgb(220, 20, 60)',color:'white'  }}
             >
               {item.name}
             </Button>
