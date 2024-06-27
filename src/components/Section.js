@@ -28,6 +28,26 @@ const Section = () => {
             </span>
         
       </Typography>
+      <Typography variant="h6" className="carousel-sideheading">
+      <span style={{ fontSize: '14px', fontFamily: 'Times New Roman, Times, serif', textShadow: '0px 2px 4px rgba(0, 0, 0, 3.3)' }}>
+      Support_alokindustries@alokind.com
+            </span>
+        
+      </Typography>
+      {/* <Typography variant="h6" className="carousel-sideheading1">
+      <span style={{ fontSize: '13px', fontFamily: 'Times New Roman, Times, serif', textShadow: '0px 2px 4px rgba(0, 0, 0, 3.3)' }}>
+      
+            </span>
+        
+      </Typography>
+      <Typography variant="h6" className="carousel-sideheading2">
+      <span style={{ fontSize: '13px', fontFamily: 'Times New Roman, Times, serif', textShadow: '0px 2px 4px rgba(0, 0, 0, 3.3)' }}>
+      
+            </span>
+        
+      </Typography> */}
+      
+      
       <div className="carousel-wrapper">
         <Carousel
           showThumbs={false}

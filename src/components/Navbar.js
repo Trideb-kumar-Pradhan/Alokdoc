@@ -206,7 +206,7 @@ const Navbar = () => {
               alignItems: 'center',
             }}
           >
-            <img src="/lo.png" alt="Company Logo" style={{ height: '55px', marginRight: '0.5rem', borderRadius: '5px', boxShadow: '0px 3px 5px rgba(4, 5, 0, 2.5)' }} />
+            <img src="/lo.png" alt="Company Logo" style={{ height: '48px', marginRight: '0.5rem', borderRadius: '5px', boxShadow: '0px 3px 5px rgba(4, 5, 0, 2.5)' }} />
             <span style={{ fontSize: '25px', fontFamily: 'Times New Roman, Times, serif', textShadow: '0px 2px 4px rgba(0, 0, 0, 3.3)' }}>
               ALOK INDUSTRIES SILVASSA
             </span>
