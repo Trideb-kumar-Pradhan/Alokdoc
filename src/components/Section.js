@@ -30,7 +30,7 @@ const Section = () => {
       </Typography>
       <Typography variant="h6" className="carousel-sideheading">
       <span style={{ fontSize: '14px', fontFamily: 'Times New Roman, Times, serif', textShadow: '0px 2px 4px rgba(0, 0, 0, 3.3)' }}>
-      Support_alokindustries@alokind.com
+      Alok Industries Ltd  1986 - 2024  
             </span>
         
       </Typography>
