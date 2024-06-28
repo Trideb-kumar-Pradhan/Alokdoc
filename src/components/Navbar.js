@@ -116,9 +116,9 @@ import '@react-pdf-viewer/core/lib/styles/index.css';
 
 const navItems = [
   { name: 'MM', pdfs: ['A.pdf', 'E.pdf', 'D.pdf', 'C.pdf', 'B.pdf','B.pdf','B.pdf'], displayNames: ['PURCHASE REQUISITION', 'PURCHASE ORDER', 'SERVICE ENTRY AGAINST WORK ORDER', 'INVENTORY MANAGEMENT', 'INBOUND TRUCK TRACKING','OUTGATE PASS ORDER','REPORTS'] },
-  { name: 'PPPI', pdfs: ['A.pdf', 'B.pdf', 'E.pdf', 'C.pdf', 'D.pdf'], displayNames: ['MASTER DATA', 'PACKING PREREQUISITES', 'PO CREATION', 'PRS', 'MFORM'] },
+  { name: 'PPPI', pdfs: ['A.pdf', 'B.pdf', 'E.pdf', 'PRS.pdf', 'MFORM.pdf'], displayNames: ['MASTER DATA', 'PACKING PREREQUISITES', 'PO CREATION', 'PRS', 'MFORM'] },
   { name: 'EWM', pdfs: ['A.pdf', 'B.pdf', 'E.pdf'], displayNames: ['TRANSPORT', 'TRACKFIRST', 'WMDASHBOARD'] },
-  { name: 'PACKING MODULE', pdfs: ['A.pdf', 'B.pdf', 'E.pdf', 'C.pdf', 'D.pdf','A.pdf', 'B.pdf', 'E.pdf', 'C.pdf', 'D.pdf','B.pdf', 'E.pdf', 'C.pdf', 'D.pdf'], displayNames: ['CP/MASTERBATCH', 'POY/FDY', 'PSF/RPSF', 'DTY', 'WEAVING','KNITTING','EMBROIDARY','HEMMING','GARMENT','MADEUPS/BADDING','SEFTY TEXTTILE','SPINNING/PACKAGING/CONE/BRIKET','TEXTTILE PALLET TRANSFER','ZPPRECRON'] },
+  { name: 'PACKING MODULE', pdfs: ['A.pdf', 'PACKINGPOYFDY.pdf', 'PACKINGPSFRPSF.pdf', 'UM_DTY.pdf', 'D.pdf','A.pdf', 'B.pdf', 'E.pdf', 'C.pdf', 'D.pdf','B.pdf', 'UMSPUN.pdf', 'C.pdf', 'D.pdf'], displayNames: ['CP/MASTERBATCH', 'POY/FDY', 'PSF/RPSF', 'DTY', 'WEAVING','KNITTING','EMBROIDARY','HEMMING','GARMENT','MADEUPS/BADDING','SEFTY TEXTTILE','SPINNING/PACKAGING/CONE/POLYFILL','TEXTTILE PALLET TRANSFER','ZPPRECRON'] },
 ];
 
 const submenuOptions = {
