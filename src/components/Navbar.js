@@ -153,7 +153,9 @@ const Navbar = () => {
   const [subDialogOpen, setSubDialogOpen] = useState(false);
   const [selectedPDF, setSelectedPDF] = useState(null);
   const [submenuItems, setSubmenuItems] = useState([]);
-
+  const [hoveredButton, setHoveredButton] = useState(null);
+  const [hoveredButtonn, setHoveredButtonn] = useState(null);
+  const [hoveredButtonm, setHoveredButtonm] = useState(null);
   const handleClick = (event, item) => {
     setSelectedItem(item);
     setAnchorEl(event.currentTarget);
@@ -193,6 +195,7 @@ const Navbar = () => {
     setSubDialogOpen(false);
     setSubmenuItems([]); 
   };
+
   
 
   return (
@@ -218,29 +221,41 @@ const Navbar = () => {
               <Button
                 aria-controls={`simple-menu-${index}`}
                 aria-haspopup="true"
-                onClick={(e) => handleClick(e, item)}
+                onClick={(e) => handleClick(e, item)}onMouseEnter={() => setHoveredButton(index)}
+                onMouseLeave={() => setHoveredButton(null)}
                 color="inherit"
                 style={{
                   boxShadow: '0px 3px 5px rgba(4, 3, 6, 0.4)', 
                   margin: '5px', 
                   color:'white',
+                  transform: hoveredButton === index ? 'scale(1.1)' : 'scale(1)',
+                  transition: 'transform 0.3s ease-in-out',
                 }}
               >
                 {item.name}
               </Button>
               <Menu
-                id={`simple-menu-${index}`}
-                anchorEl={anchorEl}
-                keepMounted
-                open={Boolean(anchorEl && selectedItem === item)}
-                onClose={handleClose}
-              >
-                {item.pdfs.map((pdf, idx) => (
-                  <MenuItem key={idx} onClick={() => handleView(pdf, item.displayNames[idx])}>
-                    {item.displayNames[idx]}
-                  </MenuItem>
-                ))}
-              </Menu>
+      id={`simple-menu-${index}`}
+      anchorEl={anchorEl}
+      keepMounted
+      open={Boolean(anchorEl && selectedItem === item)}
+      onClose={handleClose}
+    >
+      {item.pdfs.map((pdf, idx) => (
+        <MenuItem
+          key={idx}
+          onClick={() => handleView(pdf, item.displayNames[idx])}
+          onMouseEnter={() => setHoveredButtonm(idx)}
+          onMouseLeave={() => setHoveredButtonm(null)}
+          style={{
+            transform: hoveredButtonm === idx ? 'scale(1.1)' : 'scale(1)',
+            transition: 'transform 0.3s ease-in-out',
+          }}
+        >
+          {item.displayNames[idx]}
+        </MenuItem>
+      ))}
+    </Menu>
             </div>
           ))}
         </Toolbar>
@@ -258,7 +273,12 @@ const Navbar = () => {
         </DialogContent>
       </Dialog>
 
-      <Dialog open={subDialogOpen} onClose={handleSubDialogClose} maxWidth="md"style={{ }} >
+      <Dialog open={subDialogOpen} onClose={handleSubDialogClose} maxWidth="md"   PaperProps={{
+    style: {
+      backgroundColor: 'rgba(255, 255, 255, 0.3)',padding:'10px' // Transparent white background
+    },
+  }}
+ >
         <DialogContent style={{ padding:'10px' , display:'flex', justifyContent: 'center'}}>
           {submenuItems && submenuItems.map((item, idx) => (
             <Button
@@ -267,8 +287,10 @@ const Navbar = () => {
                 setSelectedPDF(item.pdf);
                 setDialogOpen(true);
                 handleSubDialogClose();
-              }}
-              style={{ margin: '10px',  boxShadow: '0px 3px 5px rgba(4, 5, 0, 2.5)',fontSize:'15px',backgroundColor:'rgb(220, 20, 60)',color:'white'  }}
+              }}onMouseEnter={() => setHoveredButtonn(idx)}
+              onMouseLeave={() => setHoveredButtonn(null)}
+              style={{ margin: '10px',  boxShadow: '0px 3px 5px rgba(4, 5, 0, 1.5)',fontSize:'17px',backgroundColor:'rgb(220, 20, 60)',color:'white', transform: hoveredButtonn === idx ? 'scale(1.1)' : 'scale(1)',
+                transition: 'transform 0.3s ease-in-out',}}
             >
               {item.name}
             </Button>
