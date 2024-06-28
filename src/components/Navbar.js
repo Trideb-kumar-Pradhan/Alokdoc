@@ -250,6 +250,8 @@ const Navbar = () => {
           style={{
             transform: hoveredButtonm === idx ? 'scale(1.1)' : 'scale(1)',
             transition: 'transform 0.3s ease-in-out',
+            backgroundColor: hoveredButtonm === idx ? 'rgb(230, 20, 60)' : 'transparent',
+            color : hoveredButtonm === idx ? 'white' : 'black',
           }}
         >
           {item.displayNames[idx]}
